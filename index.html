@@ -9,7 +9,6 @@
 :root{
   --bg:#070b10; --card:#101720; --card2:#0c1219; --text:#f5f7fa;
   --muted:#aab4c0; --green:#20d17a; --red:#ff5b67; --line:#22303d;
-  --blue:#0099FF; --blue2:#00D4FF;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -23,7 +22,6 @@ nav{position:sticky;top:0;z-index:20;background:rgba(7,11,16,.94);backdrop-filte
 .navlinks a:hover{color:var(--green)}
 .btn{display:inline-block;padding:13px 20px;border-radius:9px;font-weight:700}
 .btn-green{background:var(--green);color:#04110a}.btn-outline{border:1px solid #3b4a59;color:white}
-.btn-blue{background:linear-gradient(135deg, var(--blue), var(--blue2));color:white}
 .hero{min-height:650px;display:flex;align-items:center;position:relative;overflow:hidden}
 .hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:rgba(32,209,122,.09);filter:blur(80px);right:-180px;top:-80px}
 .badge{display:inline-block;border:1px solid #2b5945;background:#0c1b14;color:#7ff0b2;padding:7px 12px;border-radius:30px;font-size:13px;margin-bottom:18px}
@@ -49,21 +47,14 @@ section{padding:85px 0}.section-title{text-align:center;margin-bottom:45px}.sect
 .contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}.contact .card a{color:var(--green)}
 footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:13px}
 .footerin{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-
-/* PAYMENT BOX NEW */
-.payment-box{background:linear-gradient(135deg, var(--blue), var(--blue2)); border-radius:18px; padding:40px 25px; text-align:center; margin:60px auto; max-width:700px; border:2px solid var(--blue2)}
-.payment-box h2{font-size:32px; margin-bottom:10px}
-.payment-box p{color:#e6f7ff; margin-bottom:20px; font-size:16px}
-.pay-btn{display:inline-block; background:white; color:var(--blue); padding:16px 35px; border-radius:10px; font-size:20px; font-weight:800; margin:10px; transition:0.3s}
-.pay-btn:hover{transform:scale(1.05)}
-
 @media(max-width:800px){
  .navlinks{display:none}.ticker,.grid,.analysis,.contact{grid-template-columns:1fr 1fr}
  .hero{min-height:560px}.section-title h2{font-size:31px}
+}
 @media(max-width:520px){
  .ticker,.grid,.analysis,.contact{grid-template-columns:1fr}
  section{padding:65px 0}.cta{padding:35px 20px}h1{font-size:47px}
- .payment-box h2{font-size:24px}
+}
 </style>
 </head>
 <body>
@@ -71,11 +62,100 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-s
  <div class="container navin">
   <a class="logo" href="#home">PAKISTAN <span>TRADING SIGNALS</span></a>
   <div class="navlinks">
-   <a href="#markets">Markets</a><a href="#analysis">Analysis</a><a href="#education">Education</a><a href="#vip">VIP</a><a href="#contact">Contact</a>
+   <a href="#markets">Markets</a><a href="#analysis">Analysis</a><a href="#education">Education</a><a href="#contact">Contact</a>
   </div>
-  <a class="btn btn-blue" href="#vip">Join VIP</a>
+  <a class="btn btn-green" href="#contact">Join Us</a>
  </div>
 </nav>
 
 <main>
-<section class="hero" id="
+<section class="hero" id="home">
+ <div class="container">
+  <div class="badge">🇵🇰 Pakistan's Trading Education Community</div>
+  <h1>Learn. Analyze.<br><span>Trade Smart.</span></h1>
+  <p>Forex • Crypto • Gold • Market Analysis. Practical trading education, chart analysis and risk-management concepts for traders who want to improve their skills.</p>
+  <div class="actions">
+   <a class="btn btn-green" href="#analysis">View Analysis</a>
+   <a class="btn btn-outline" href="#education">Learn Trading</a>
+  </div>
+  <div class="ticker">
+   <div class="tick"><small>FOREX</small><strong>EUR/USD</strong><span class="up">Market Watch ↗</span></div>
+   <div class="tick"><small>GOLD</small><strong>XAU/USD</strong><span class="up">Market Watch ↗</span></div>
+   <div class="tick"><small>CRYPTO</small><strong>BTC/USD</strong><span class="up">Market Watch ↗</span></div>
+   <div class="tick"><small>INDEX</small><strong>US100</strong><span class="down">Volatility Watch ↘</span></div>
+  </div>
+ </div>
+</section>
+
+<section id="markets">
+ <div class="container">
+  <div class="section-title"><h2>Markets We Cover</h2><p>Educational analysis across major trading markets.</p></div>
+  <div class="grid">
+   <div class="card"><div class="icon">💱</div><h3>Forex</h3><p>Major currency pairs, support/resistance, trends and technical setups.</p></div>
+   <div class="card"><div class="icon">🥇</div><h3>Gold</h3><p>XAU/USD market structure, key levels and risk-aware analysis.</p></div>
+   <div class="card"><div class="icon">₿</div><h3>Crypto</h3><p>Bitcoin and selected crypto markets with chart-based educational content.</p></div>
+   <div class="card"><div class="icon">📈</div><h3>Indices</h3><p>Selected global indices, price action and market sentiment.</p></div>
+   <div class="card"><div class="icon">📊</div><h3>Technical Analysis</h3><p>Charts, trends, indicators, price action and trading psychology.</p></div>
+   <div class="card"><div class="icon">🛡️</div><h3>Risk Management</h3><p>Position sizing, stop-loss concepts and disciplined trading habits.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="analysis">
+ <div class="container">
+  <div class="section-title"><h2>Market Analysis</h2><p>Simple, chart-focused and educational.</p></div>
+  <div class="analysis">
+   <div class="card chart">
+    <div class="chartgrid"></div><div class="chartline"></div>
+    <h3 style="position:relative;z-index:2">Technical View</h3>
+    <p style="position:relative;z-index:2;color:#aab4c0;margin-top:5px">Illustrative chart — not a live price feed.</p>
+   </div>
+   <div class="card">
+    <h3>What We Look For</h3>
+    <p style="margin:15px 0;color:#aab4c0">✓ Market trend & structure<br>✓ Support and resistance<br>✓ Breakouts and retests<br>✓ Risk-to-reward planning<br>✓ News & volatility awareness<br>✓ Trading psychology</p>
+    <div class="disclaimer"><strong>Risk Notice:</strong> Content on this website is for education and information only. It is not financial advice and no profit or result is guaranteed. Trading involves substantial risk.</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="education">
+ <div class="container">
+  <div class="section-title"><h2>Trading Education</h2><p>Build knowledge before risking money.</p></div>
+  <div class="grid">
+   <div class="card"><h3>01 — Beginner Basics</h3><p>Learn charts, candles, trends, leverage and basic market terminology.</p></div>
+   <div class="card"><h3>02 — Technical Analysis</h3><p>Understand levels, patterns, indicators and price-action concepts.</p></div>
+   <div class="card"><h3>03 — Risk Management</h3><p>Learn why capital protection and disciplined position sizing matter.</p></div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="container">
+  <div class="cta">
+   <h2>Follow Pakistan Trading Signals</h2>
+   <p>Get educational market content, chart analysis and trading lessons. No fake promises — just a focus on learning and smarter decision-making.</p>
+   <a class="btn btn-green" href="https://www.facebook.com/PakistanTradingSignals" target="_blank" rel="noopener">Visit Facebook Page</a>
+  </div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="container">
+  <div class="section-title"><h2>Contact</h2><p>For collaborations, education content or page enquiries.</p></div>
+  <div class="contact">
+   <div class="card"><h3>Facebook</h3><p><a href="https://www.facebook.com/PakistanTradingSignals" target="_blank" rel="noopener">Pakistan Trading Signals</a></p></div>
+   <div class="card"><h3>Email</h3><p><a href="mailto:pakistantradingsignals@gmail.com">pakistantradingsignals@gmail.com</a></p></div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="container footerin">
+  <div>© 2026 Pakistan Trading Signals. All rights reserved.</div>
+  <div>Learn • Analyze • Trade Smart</div>
+ </div>
+</footer>
+</body>
+</html>
